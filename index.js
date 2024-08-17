@@ -1,5 +1,5 @@
 import express from 'express';
-import { initApp } from './src/modules/initApp.js';
+import { initApp } from './src/initApp.js';
 import 'dotenv/config';
 const app = express();
 const port = 3000;

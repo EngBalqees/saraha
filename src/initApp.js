@@ -1,5 +1,6 @@
-import connectdb from "../../DB/connection.js";
-import auth from '../modules/auth/auth.router.js';
+import connectdb from "../DB/connection.js";
+import auth from "../src/modules/auth/auth.router.js";
+import { sendEmail } from "./Utils/sendemail.js";
 
 export const initApp = (app,express)=>{
     connectdb();
