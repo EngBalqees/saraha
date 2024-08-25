@@ -9,5 +9,9 @@ export const initApp = (app,express)=>{
     app.use('/message',message);
     app.use('*',(req,res) =>{
         return res.status(404).json({message:"page not found"});
-    })
+    });
+
+    app.use((err,req,res,next)=>{
+        return res.status(400).json({message:err.message});
+    });
 }
