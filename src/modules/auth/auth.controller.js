@@ -44,3 +44,12 @@ export const Login = async(req,res)=>{
  const token = await jwt.sign({id:user._id},process.env.LOGINSIGNTURE,{expiresIn: '2h'});
  return res.status(200).json({message:"success",token});
 }
+
+export const allUsers = async (req,res)=>{
+  try{
+    const users = await userModel.find.select('userName');
+
+  }catch(error){
+
+  }
+}
